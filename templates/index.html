@@ -1,0 +1,379 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Good and Valuable Price Laptop </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <div class="logo">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="{% static 'assets/img/space/logo.png' %}" alt="" id="logo">
+        {% comment %} <h1 class="sitename">Akshat_ios</h1> {% endcomment %}
+      </a>
+    </div>
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">Home<br></a></li>
+          <li><a href="/purchase" class="active">Purchase<br></a></li>
+
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/Checkout">Checkout</a></li>
+          <li><a href="">Order</a></li>
+          <li><a href="/services">Tracker</a></li>
+  
+
+
+    {% if request.user.is_authenticated %}
+
+    <button type="button" class="btn btn-dark" id="popcart"
+    data-container="body" data-toggle="popover" data-placement="bottom"
+    data-html-"true" data-content-"Vivamus
+    sagittis lacus vel augue laoreet rutrum faucibus.">
+    ·Cart(<span id="cart">0</span>)
+    </button>
+
+
+         <li><a>Welcome {{user.username}} </a></li>
+          <li><a href="/arkauth/logout/">logout</a></li>
+
+        {% else %}
+            <li><a href="/arkauth/login/">SignIn</a></li>
+          {% endif %}
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h1>Grow your business with Vesperr</h1>
+            <p>We are team of talented designers making websites with Bootstrap</p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started scrollto">Get Started</a>
+              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center">
+                <i class="bi bi-play-circle"></i><span>Watch Video</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <img src="{% static 'assets/img/space/hero-img.png' %}" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero Section -->
+
+    <main id="main">
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Products</h2>
+      </div>
+
+      
+      {% for product, range, nSlides in allProds %}
+      <div class="container">
+        <h3 class="my-3 text-center text-success bg-light">
+          {{product.0.category}} Flashsale
+        </h3>
+      </div>
+      <div class="container">
+        <div class="row">
+          {% for i in product %}
+          <div class="col-md-3 mt-3">
+            <img src="/media/{{i.image}}" class="card-img-top"
+            alt="..." />
+            <div class="card-body">
+              <h5 class="card-title" id="namepr{{i.id}}">
+                {{i.product_name}}
+              </h5>
+                <p class="card-text">{{i.desc|slice:"0:25"}}...</p>
+                <h6 class="card-title">
+                  Price:<span id="pricepr{{i.id}}">{{i.price}}</span>
+                </h6>
+                <span id="divpr{{i.id}}" class="divpr">
+                  <button
+                    id="pr{{i.id}}"
+                    class="btn btn-success cart btn-sm mt-0"
+                  >
+
+                    AddToCart
+                  </button>
+                </span>
+
+                <a href="/media/{{i.image}}">
+                  <button class="btn btn-success btn-sm
+                  cart">View</button></a
+                >
+                </div>
+              </div>
+
+              {% endfor %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </section><!-- /About Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@example.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Vesperr</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+
+
+  <script>
+    // Retrieve the cart from local storage or initialize it
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        updateCart(cart);
+    }
+  
+    // Add or increment item in the cart
+    $('.divpr').on('click', 'button.cart', function() { 
+        var idstr = this.id.toString();
+  
+        if (cart[idstr] != undefined) {
+            qty = cart[idstr][0] + 1;
+        } else {
+            qty = 1;
+            name = document.getElementById('name' + idstr).innerHTML;
+            price = document.getElementById('price' + idstr).innerHTML;
+            cart[idstr] = [qty, name, price];
+        }
+        updateCart(cart);
+  
+        // Update local storage and cart display
+        localStorage.setItem('cart', JSON.stringify(cart));
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    });
+  
+    // Initialize popover for the cart
+    $('#popcart').popover();
+  
+    // Update popover content
+    function updatePopover(cart) {
+        console.log('Updating popover');
+        var popStr = "<h5>Your Shopping Cart</h5><div class='mx-2 my-2'>";
+        var i = 1;
+        for (var item in cart) {
+            popStr += `<b>${i}</b>. ${document.getElementById('name' + item).innerHTML.slice(0, 19)}... <b>${cart[item][0]}</b> Qty<br>`;
+            i += 1;
+        }
+        popStr += "</div><a href='/checkout' class='btn btn-primary'>Checkout</a><a onclick='clearCart()' class='btn btn-danger mx-2'>Clear Cart</a>";
+        $('#popcart').attr('data-content', popStr).popover('show');
+    }
+  
+    // Function to update cart display in UI
+    function updateCart(cart) {
+        var totalQty = 0;
+        for (var item in cart) {
+            totalQty += cart[item][0];
+        }
+        document.getElementById('cart').innerHTML = totalQty;
+        updatePopover(cart);
+    }
+  
+    // Function to clear cart
+    function clearCart() {
+        localStorage.removeItem('cart');
+        cart = {};
+        updateCart(cart);
+        $('#popcart').popover('hide');
+    }
+  
+    // Trigger updatePopover to display current cart items
+    updatePopover(cart);
+  </script>
+
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+<!-- Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

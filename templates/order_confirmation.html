@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Order Confirmation - Akshat_ios
+{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <h3 class="my-3 text-center text-success bg-light">Order Confirmation</h3>
+    <p>Thank you for your order!</p>
+    <p><strong>Shipping Address:</strong> {{ shipping_address }}</p>
+    <p><strong>Payment Method:</strong> {{ payment_method }}</p>
+    <p><strong>Total Amount:</strong> ₹{{ total }}</p>
+    <p>Your order has been successfully placed. You will receive a confirmation email shortly.</p>
+</div>
+{% endblock body %}

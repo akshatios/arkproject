@@ -1,0 +1,10 @@
+{% autoescape off %}
+
+Hi {{ user.username }}
+Please click the link below to verify your account:
+
+
+<a href="http://{{ domain }}{% url 'arkauth:activate' uidb64=uid token=token %}">Activate Account</a>
+
+
+{% endautoescape %}

@@ -1,0 +1,21 @@
+{% extends 'nav.html' %}
+{% block title %}
+Akshat_ios
+{% endblock title %}
+
+{% block body %}
+{% load static %}
+
+
+<!--Slideshow starts here -->
+
+{% for product, range, nSlides in allProds %}
+
+<div class="container">
+
+<h3 class="my-3 text-center text-success bg-light"> {{product.0.category}} Flashsale </h3>
+</div>
+<div class="container">
+<div class="row">
+    
+{% for i in product %}

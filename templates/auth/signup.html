@@ -1,0 +1,83 @@
+{% extends "nav.html" %}
+{% block title %}
+Akshat_ios
+{% endblock title %}
+
+{% block body %}
+    <section id="contact" class="contact">
+        <div lcass="container">
+
+            <div class="section-title" data-aos="fade-up">
+
+<div class="row">
+
+<div class="col-md-2"></div>
+<div class="col-md-4">
+
+
+    <h1 data-aos="fade-up">Signup</h1>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="400">
+    
+    </div>
+    
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong>{{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    {% comment %} <form action="/arkauth/signup/" method="post">{% csrf_token %} {% endcomment %}
+    <form action="{% url 'arkauth:signup' %}" method="post">{% csrf_token %}
+
+
+    
+        <label for="username">Username</label>
+        <div class="form-group">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter UserName" required>
+        </div>
+        
+        <label for="fname">First Name</label>
+        <div class="form-group">
+            <input type="text" class="form-control" id="fname" name="fname" required>
+        </div>
+        
+        <label for="lname">Last Name</label>
+        <div class="form-group">
+            <input type="text" class="form-control" id="lname" name="lname" required>
+        </div>
+        
+        <label for="email">Email</label>
+        <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        
+        <label for="pass1">Password</label>
+        <div class="form-group">
+            <input type="password" class="form-control" id="pass1" name="pass1" required>
+        </div>
+        
+        <label for="pass2">Confirm Password</label>
+        <div class="form-group">
+            <input type="password" class="form-control" id="pass2" name="pass2" required>
+        </div>
+<br>        
+        <button type="submit" class="btn btn-primary btn-sm btn-block">Sign In</button>
+        
+        <br>
+        Already a user? <a href="/arkauth/login/">Login</a>
+        <br>
+    </form>
+    </div>
+
+</div>
+<div class="col-md-6"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<
+{% endblock body %}
